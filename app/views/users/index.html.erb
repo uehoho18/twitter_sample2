@@ -1,6 +1,8 @@
 <p id="notice"><%= notice %></p>
 
 <h1>Users</h1>
+<p><%= current_user.email %>がログインしてます</p>
+<%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
 
 <table>
   <thead>
@@ -27,5 +29,3 @@
 </table>
 
 <br>
-
-<%= link_to 'New User', new_user_path %>
